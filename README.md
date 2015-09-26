@@ -2,15 +2,16 @@
 
 Start your new Golang project in professional way! :)
 
-1. use script `go-setup-project` inside desired project dir
+1. use script `go-setup-project` in future project dir
 
 ====================================
 
 What script is actually doing
 
-1. place `build.sh` and `Makefile` in the root of your new project
+1. place files like `build.sh` and `Makefile` in the root of your new project
+2. ask about app name, author, and site and update `build.sh` accordingly
 2. create `code` dir 
-3. create `code/main.go` looking like this
+3. create `code/main.go` looking like this:
 
 ```go
 package code

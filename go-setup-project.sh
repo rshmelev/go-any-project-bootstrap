@@ -1,6 +1,10 @@
 #!/bin/bash
 
 function setupTheProject {
+    echo "getting some dependencies..."
+    go get github.com/kardianos/govendor
+    command -v gometalinter >/dev/null 2>&1 || { go get github.com/alecthomas/gometalinter && gometalinter --install --update ; }
+    go get github.com/mattn/gom
     # just in case you're using this only file without downloading the repo
     go get github.com/rshmelev/go-any-project-bootstrap/launcher
 
