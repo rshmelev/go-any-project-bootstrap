@@ -94,7 +94,7 @@ function carefulcp {
 }
 
 function sedeasy {
-  sed -i .bak "s/$(echo $1 | sed -e 's/\([[\/.*]\|\]\)/\\&/g')/$(echo $2 | sed -e 's/[\/&]/\\&/g')/g" $3
+  sed -i.bak "s/$(echo $1 | sed -e 's/\([[\/.*]\|\]\)/\\&/g')/$(echo $2 | sed -e 's/[\/&]/\\&/g')/g" $3
 }
 
 function doupdatebuildsh {
@@ -109,7 +109,7 @@ function doupdatebuildsh {
     sedeasy '_________AUTHORLONG__________' "${AUTHOR_LONG}" ${DST}/build.sh
     sedeasy '_________AUTHORSHORT__________' "${AUTHOR_SHORT}" ${DST}/build.sh
     sedeasy '_________SITE__________' "${SITEURL}" ${DST}/build.sh
-    rm ${DST}/build.sh.bak
+    rm ${DST}/*.bak
 }
 
 setupTheProject
